@@ -1,0 +1,32 @@
+{
+  "extends": ["plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    // disable requiring trailing commas
+    "comma-dangle": 0,
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true
+      }
+    ],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "useTabs": true
+      }
+    ]
+  }
+}
